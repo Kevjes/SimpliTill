@@ -1,5 +1,8 @@
+// @dart=2.9
 import 'package:get/get.dart';
 
+import 'package:simpli_till_test/app/modules/basket/bindings/basket_binding.dart';
+import 'package:simpli_till_test/app/modules/basket/views/basket_view.dart';
 import 'package:simpli_till_test/app/modules/home/bindings/home_binding.dart';
 import 'package:simpli_till_test/app/modules/home/views/home_view.dart';
 
@@ -15,6 +18,11 @@ class AppPages {
       name: _Paths.HOME,
       page: () => HomeView(),
       binding: HomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.BASKET,
+      page: () => BasketView(),
+      binding: BasketBinding(),
     ),
   ];
 }
