@@ -159,26 +159,28 @@ class HomeView extends GetView<HomeController> {
                                 ),
                               ),
                               Container(
-                                  height: 80,
-                                  width: 100,
+                                  height: 50,
+                                  width: 50,
                                   padding: EdgeInsets.symmetric(
-                                      horizontal: 30, vertical: 20),
+                                      horizontal: 5, vertical: 5),
                                   child: Container(
                                       decoration: BoxDecoration(
                                           color: Config.colors.blue,
                                           borderRadius:
-                                              BorderRadius.circular(50)),
+                                              BorderRadius.circular(30)),
                                       child: IconButton(
                                           onPressed: () {},
                                           icon: Icon(
                                             Icons.add,
                                             color: Colors.white,
+                                            size: 14,
                                           ))))
                             ],
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(right: 150),
+                          padding: EdgeInsets.only(
+                              right: homeController.isMobile.value ? 0 : 150),
                           child: TextFormField(
                             decoration: InputDecoration(
                               prefixIcon: Icon(

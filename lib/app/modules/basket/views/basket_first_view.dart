@@ -12,7 +12,7 @@ class BasketFirstView extends GetView {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: Get.width < 700 ? EdgeInsets.symmetric(horizontal: 20) : null,
       child: Column(
         children: [
           Expanded(
@@ -49,7 +49,7 @@ class BasketFirstView extends GetView {
                   elevation: .0,
                   onTap: () {},
                 ),
-                Divider(height: 0),
+                Divider(),
                 MyCustomButton(
                   title: "Annuler le ticket".toUpperCase(),
                   titleColor: Config.colors.red,
@@ -58,7 +58,7 @@ class BasketFirstView extends GetView {
                   elevation: .0,
                   onTap: () {},
                 ),
-                Divider(height: 0),
+                Divider(),
                 Container(
                   height: 45,
                   child: MyCustomButton(

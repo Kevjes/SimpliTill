@@ -19,7 +19,8 @@ class MyCustomButton extends StatelessWidget {
       this.backgroundColor,
       this.titleColor,
       this.radius = 5,
-      this.preffixIcon, this.elevation=3})
+      this.preffixIcon,
+      this.elevation = 3})
       : super(key: key);
 
   @override
@@ -31,7 +32,7 @@ class MyCustomButton extends StatelessWidget {
         this.titleColor != null ? this.titleColor : Colors.white;
     return ElevatedButton(
         style: ButtonStyle(
-          elevation: MaterialStateProperty.all(this.elevation),
+            elevation: MaterialStateProperty.all(this.elevation),
             backgroundColor: MaterialStateProperty.all(backgroundColor),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
@@ -49,18 +50,22 @@ class MyCustomButton extends StatelessWidget {
                   this.title!,
                   style: TextStyle(
                       color: titleColor,
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.w500),
                 ),
               )),
             if (this.suffixIcon != null)
               Container(
-                height: 30,
-                width: 30,
+                height: 20,
+                width: 20,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: Config.colors.red),
-                child: Icon(this.suffixIcon, color: Colors.white),
+                child: Icon(
+                  this.suffixIcon,
+                  color: Colors.white,
+                  size: 14,
+                ),
               ),
           ],
         ));

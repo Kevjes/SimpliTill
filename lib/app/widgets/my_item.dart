@@ -6,8 +6,7 @@ import 'package:simpli_till_test/app/models/my_item_model.dart';
 
 class MyItemWidget extends StatelessWidget {
   final MyItemModel item;
-  const MyItemWidget({Key key, this.item})
-      : super(key: key);
+  const MyItemWidget({Key key, this.item}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +29,12 @@ class MyItemWidget extends StatelessWidget {
                 Text(
                   this.item.title,
                   style: TextStyle(
-                      color: Config.colors.greyTextColor, fontSize: 18),
+                      color: Config.colors.greyTextColor, fontSize: 16),
                 ),
                 Text(
                   this.item.price.toString() + " CFA",
                   style: TextStyle(
-                      color: Config.colors.greyTextColor2, fontSize: 15),
+                      color: Config.colors.greyTextColor2, fontSize: 14),
                 ),
               ],
             ),
